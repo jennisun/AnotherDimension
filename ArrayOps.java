@@ -71,20 +71,24 @@ public class ArrayOps {
 
 
    public static boolean isRowMagic(int[][] matrix) {
-     int[] s = sumCols(matrix);
+     int[] s = sumRows(matrix);
      boolean ans = true;
 
      for (int i = 0; i < s.length - 1; i ++) {
        ans = ans && (s[i] == s[i + 1]);
      }
      return ans;
+   }
 
 
+   public static boolean isColMagic(int[][] matrix) {
+     int [] sum = sumCols(matrix);
+     boolean ans = true;
 
-
-
-
-
+     for (int i = 0; i < sum.length - 1; i ++) {
+       ans = ans && (sum[i] == sum[i + 1]);
+     }
+     return ans;
    }
 
 
