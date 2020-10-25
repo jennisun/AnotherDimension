@@ -92,8 +92,21 @@ public class ArrayOps {
    }
 
 
+   public static boolean isLocationMagic(int[][] matrix, int row, int col) {
+     int rowSum = 0;
 
+     for (int i = 0; i < matrix[0].length; i ++) {
+       rowSum += matrix[row][i];
+     }
 
+     int colSum = 0;
+
+     for (int h = 0; h < matrix.length; h ++) {
+       colSum += matrix[h][col];
+     }
+
+     return (rowSum == colSum);
+   }
 
 
 }
