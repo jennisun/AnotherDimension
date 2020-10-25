@@ -54,12 +54,38 @@ public class ArrayOps {
      for (int i = 0; i < sum.length; i ++) {
        ans += sum[i];
      }
-
      return ans;
    }
 
 
+   public static int[] sumCols(int[][] matrix) {
+     int[] sum = new int [matrix[0].length];
 
+     for (int i  = 0; i < matrix[0].length; i ++) {
+       for (int h = 0; h < matrix.length; h ++) {
+         sum [i] += matrix[h][i];
+       }
+     }
+     return sum;
+   }
+
+
+   public static boolean isRowMagic(int[][] matrix) {
+     int[] s = sumCols(matrix);
+     boolean ans = true;
+
+     for (int i = 0; i < s.length - 1; i ++) {
+       ans = ans && (s[i] == s[i + 1]);
+     }
+     return ans;
+
+
+
+
+
+
+
+   }
 
 
 
