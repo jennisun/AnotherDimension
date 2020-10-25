@@ -20,6 +20,10 @@ int[][] D = { {  1,  1, 1 },
 int[][] E = { {  2,  2, 2 },
    {  2, 2, 2 } };  //this is both colMagic AND rowMagic
 
+   int[][]F = {
+   {  2,  4, 2 },
+   {  2, 2, 2 } };
+
     System.out.println( ArrayOps.isRowMagic(C));
     System.out.println( ArrayOps.isColMagic(C));
 
@@ -28,6 +32,9 @@ int[][] E = { {  2,  2, 2 },
 
     System.out.println( ArrayOps.isRowMagic(E));
     System.out.println( ArrayOps.isColMagic(E));
+
+    System.out.println( ArrayOps.isLocationMagic(F, 0, 1));
+    System.out.println( ArrayOps.isLocationMagic(F, 1, 1));
 
 
   }
